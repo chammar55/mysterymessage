@@ -9,7 +9,7 @@ type ConnectionObject = {
 const connection: ConnectionObject = {};
 
 //promis is telling that we connect with db we will get something back like any data
-// voie tell i dont care which type of data i get
+// void tell i dont care which type of data i get
 async function dbConnect(): Promise<void> {
   // check if already connection is available or not (cuz nextjs only make connection when client request for it, while in react we dont need to check this cuz connection is already available)
   if (connection.isConnected) {
