@@ -69,6 +69,8 @@ const UserSchema: Schema<User> = new Schema({
 });
 
 // checking if this model already available in database then gimme already created model || checking if not present then create new model
+
+// check if already connection is available or not (cuz nextjs only make connection when client request for it, while in react we dont need to check this cuz connection is already available)
 const UserModel =
   (mongoose.models.User as mongoose.Model<User>) ||
   mongoose.model<User>("User", UserSchema);
